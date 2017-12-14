@@ -1,7 +1,7 @@
 import board_printer
 import board_utils
 import board_mover
-import getch
+import readchar
 
 
 # TODO: Don't use global variables
@@ -41,7 +41,7 @@ board_printer.print_board(board)
 
 char = ''
 while char != 'q':
-    char = getch.getch()
+    char = readchar.readchar()
 
     # Undo
     # ========================================
