@@ -43,9 +43,9 @@ def clear_board():
         print(CURSOR_UP_ONE + ERASE_LINE + CURSOR_UP_ONE)
 
 
-def print_score(board):
+def print_score(score):
     print(CURSOR_UP_ONE + ERASE_LINE + CURSOR_UP_ONE)
-    print("Score " + str(sum([x ** 2 for x in board if x != 0])))
+    print("Score " + str(score))
 """
 get_grid(grid=[
 

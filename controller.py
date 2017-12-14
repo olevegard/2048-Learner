@@ -1,4 +1,5 @@
 import board_printer
+import board_utils
 import board_mover
 import getch
 
@@ -35,7 +36,7 @@ board = [
 print(" 2048 ".center(80, "=") + "\n")
 board_history = [board.copy()]
 prev = board.copy()
-board_printer.print_score(board)
+board_printer.print_score(board_utils.get_score(board))
 board_printer.print_board(board)
 
 char = ''
@@ -95,8 +96,7 @@ while char != 'q':
         board_history.append(board.copy())
 
     board_printer.clear_board()
-    board_printer.print_score(board)
+    board_printer.print_score(board_utils.get_score(board))
     board_printer.print_board(board)
-
 
     prev = board.copy()
