@@ -35,6 +35,18 @@ def get_grid(grid : list):
 def print_board(grid : list):
     print(get_grid(grid))
 
+
+CURSOR_UP_ONE = '\x1b[1A'
+ERASE_LINE = '\x1b[2K'
+def clear_board():
+    for _ in range(18):
+        print(CURSOR_UP_ONE + ERASE_LINE + CURSOR_UP_ONE)
+
+
+def print_score(board):
+    print(CURSOR_UP_ONE + ERASE_LINE + CURSOR_UP_ONE)
+    print("Score " + str(sum([x ** 2 for x in board if x != 0])))
+"""
 get_grid(grid=[
 
     0,   32,
@@ -89,3 +101,4 @@ print(str([
     512, 1024, 0, 4096,
 ][3::4]))
 print("\n\n\n\n")
+"""
